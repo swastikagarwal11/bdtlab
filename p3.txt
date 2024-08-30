@@ -14,6 +14,7 @@ user_rating_count_by_movie = FOREACH grouped_by_movie {
 };
 DUMP user_rating_count_by_movie;
 
+grouped_by_user = GROUP ratings BY userId;
 unique_users = FOREACH grouped_by_user GENERATE group AS userId;
 DUMP unique_users;
 
