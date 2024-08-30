@@ -83,3 +83,6 @@ hdfs dfs -mkdir /input
 hdfs dfs -put dataset124.csv /input/data.csv
 yarn jar recordcount.jar RecordCount /input /output      
 hdfs dfs -cat /output/part-r-00000
+
+
+hadoop job -kill job_1722320114860_0004
